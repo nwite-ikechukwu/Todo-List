@@ -1,7 +1,5 @@
-const todoList = [
-  {name: 'hello', dueDate: '22-12-2023'},
-  {name: 'world', dueDate: '24-11-2021'}
-];
+const todoList = [];
+renderTodo();
 
 function addTodo() {
   const inputElement = document.querySelector('.js-input-element');
@@ -25,7 +23,7 @@ function renderTodo() {
     const todoHTML = `
     <div>${name}</div>
     <div>${dueDate}</div>
-    <button>Delete</button>
+    <button onclick="todoList.splice(${index}, 1); renderTodo()">Delete</button>
     `;
     todoListHTML += todoHTML;
   })
