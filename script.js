@@ -1,5 +1,7 @@
+const addButton = document.querySelector('.js-add-button');
 const todoList = [];
 renderTodo();
+addButton.addEventListener('click', addTodo);
 
 function addTodo() {
   const inputElement = document.querySelector('.js-input-element');
