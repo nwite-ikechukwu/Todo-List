@@ -17,7 +17,7 @@ function addTodo() {
 }
 
 function renderTodo() {
-  const todoListDiv = document.querySelector('.todo-list-div');
+  const todoListDiv = document.querySelector('.js-todo-list-div');
   let todoListHTML = '';
   todoList.forEach(function(value, index) {
     const todoObjectItem = value;
@@ -25,7 +25,7 @@ function renderTodo() {
     const todoHTML = `
     <div>${name}</div>
     <div>${dueDate}</div>
-    <button onclick="todoList.splice(${index}, 1); renderTodo()">Delete</button>
+    <button class="delete-button" onclick="todoList.splice(${index}, 1); renderTodo()">Delete</button>
     `;
     todoListHTML += todoHTML;
   })
